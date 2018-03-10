@@ -1,0 +1,54 @@
+.slider {
+	width:850px;
+	overflow:hidden;
+	margin:2em auto;
+}
+
+.slider-wrapper {
+	width:9999px;
+	position:relative;
+	transition:left 500ms linear;
+}
+
+.slide {
+	/* 1.flottare a sinistra questo elemento */
+	
+	position:relative;
+    width:850px;
+    float: left;
+}
+
+.slider-nav {
+	height:40px;
+	width:100%;
+	/*margin-top:1.5em;*/
+}
+
+.slider-nav button {
+	border:none;
+	display:block;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+	text-indent:-9999em;
+	background-color:transparent;
+	background-repeat:no-repeat;
+}
+
+.slider-nav button:focus {
+	outline-style:none;
+}
+
+.slider-nav button.slider-precedente {
+	float:left;
+	background-image:url(../img/left-arrow.png);
+	/*display:inline;*/
+}
+
+.slider-nav button.slider-successiva {
+    float:right;
+    background-image:url(../img/right-arrow.png);
+    /*display:inline;*/
+	/* 2.definire l'immagine di background con right-arrow.png*/
+
+}

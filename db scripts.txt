@@ -1,0 +1,19 @@
+CREATE DATABASE db_mysite;
+CREATE TABLE products
+(
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    name NVARCHAR (50) NOT NULL,
+    description NVARCHAR (200),
+    image_path NVARCHAR (200)
+);
+INSERT  INTO products(name,description,image_path)
+VALUES("Stampante","multifunzione laser.","./img/products/printer.jpg");
+
+INSERT  INTO products(name,description,image_path)
+VALUES("Server","server blade.","./img/products/serverblade.jpg");
+INSERT  INTO products(name,description,image_path)
+VALUES("Modem","","./img/products/modem.jpg");
+INSERT  INTO products(name,description,image_path)
+VALUES("Scanner","Scanner","./img/products/scanner.jpg");
+
+SELECT  p.id, p.name, p.description,p.image_path FROM products p;

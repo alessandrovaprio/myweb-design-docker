@@ -1,0 +1,53 @@
+
+  <head>
+    <style>
+      #map{
+       height: 400px;
+       width: 100%;
+      }
+      @media(max-width: 768px){
+        #map{
+          height: 200px;
+          width: 320px;
+          text-align:center;
+        }
+      }
+   </style>
+    <!--<link rel="stylesheet" href="./css/style.css">-->
+  </head>
+  
+    <div class="container">
+      <h3 id="whereweare">Dove Siamo</h3>
+      <div id="map"></div>
+    </div>
+    
+    <script>
+      function initMap() {
+        var uluru = {lat: 45.5532387, lng: 8.063024000000041};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      };
+//       google.maps.event.addDomListener(window, "resize", function() {
+//     var center = map.getCenter();
+//     google.maps.event.trigger(map, "resize");
+//     map.setCenter(center); 
+// });
+      // google.maps.event.addDomListener(window, "resize", function() {
+      //       var bound = new google.maps.LatLngBounds();
+      //       for(var i in $scope.markers)
+      //       {
+      //          bound.extend($scope.markers[i].getPosition());
+      //       }
+      //       $scope.map.fitBounds(bound);
+      //   });
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPJCJNmgAVWnsB2AnFB9SPsEXO3XXoQEg&callback=initMap">
+    </script>
+  
